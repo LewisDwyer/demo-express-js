@@ -25,5 +25,9 @@ app.get("/index", (req, res) => {
   res.redirect("/")
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
 
 app.listen(port, () => console.log(`Listening on ${port}`));
